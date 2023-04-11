@@ -1,6 +1,6 @@
 const express = require("express");
 const { calculateBMI, getCalculationHistory } = require("../controller/BMI");
-const AuthMiddleware = require("../middleware/Authmiddleware");
+const AuthMiddleware = require("../middleware/AuthMiddleware");
 
 const bmiRouter = express.Router();
 
