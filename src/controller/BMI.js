@@ -29,7 +29,10 @@ const getCalculationHistory = async (req, res) => {
   const user_id = req.userId;
 
   try {
-    const historyData = await bmiModal.find({ user_id }, { bmi_val: 1 });
+    const historyData = await bmiModal.find(
+      { user_id },
+      { bmi_val: 1, createdAt: 1 }
+    );
 
     res.status(200).send({
       status: "success",
