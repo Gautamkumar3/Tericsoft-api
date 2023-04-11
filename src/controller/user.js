@@ -52,6 +52,7 @@ const userLogin = async (req, res) => {
         status: "success",
         message: "Login successfull",
         token: token,
+        name: user.name,
       });
     }
   } catch (er) {
